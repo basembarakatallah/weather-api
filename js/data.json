@@ -1,0 +1,22 @@
+{"list":[
+    {"temp": 40, "description": "clear sky", "day": "2024-08-20", "hour": "12 PM"}, 
+    {"temp": 37, "description": "clear sky", "day": "2024-08-20", "hour": "2 PM"}, 
+    {"temp": 32, "description": "clear sky", "day": "2024-08-20", "hour": "4 PM"}, 
+    {"temp": 30, "description": "clear sky", "day": "2024-08-20", "hour": "6 PM"}, 
+    {"temp": 34, "description": "clear sky", "day": "2024-08-20", "hour": "8 PM"}, 
+    {"temp": 40, "description": "clear sky", "day": "2024-08-20", "hour": "10 PM"}, 
+    {"temp": 43, "description": "clear sky", "day": "2024-08-20", "hour": "12 AM"}, 
+    {"temp": 42, "description": "clear sky", "day": "2024-08-20", "hour": "2 AM"}, 
+    {"temp": 37, "description": "clear sky", "day": "2024-08-20", "hour": "4 AM"}, 
+    {"temp": 33, "description": "clear sky", "day": "2024-08-21", "hour": "12 PM"}, 
+    {"temp": 31, "description": "clear sky", "day": "2024-08-21", "hour": "2 PM"}, 
+    {"temp": 29, "description": "clear sky", "day": "2024-08-21", "hour": "4 PM"}, 
+    {"temp": 33, "description": "clear sky", "day": "2024-08-21", "hour": "6 PM"}, 
+    {"temp": 41, "description": "clear sky", "day": "2024-08-21", "hour": "8 PM"}, 
+    {"temp": 43, "description": "clear sky", "day": "2024-08-21", "hour": "10 PM"}, 
+    {"temp": 43, "description": "clear sky", "day": "2024-08-21", "hour": "12 AM"}, 
+    {"temp": 38, "description": "clear sky", "day": "2024-08-21", "hour": "2 AM"}, 
+    {"temp": 35, "description": "clear sky", "day": "2024-08-21", "hour": "4 AM"}, 
+    {"temp": 32, "description": "clear sky", "day": "2024-08-22", "hour":"12 PM"}, 
+    {"temp": 30, "description": "clear sky", "day": "2024-08-22", "hour": "2 PM"}
+]}
