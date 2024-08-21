@@ -1,0 +1,517 @@
+* {
+    box-sizing: border-box;
+}
+.weather {
+    width: 1519px;
+    height: 982px;
+    background-color: #B5D6D6;
+}
+.rains {
+    position: relative;
+    width: 1310px;
+    height: 238px;
+    top: 35px;
+    left: 106px;
+    background-image: url('../imgs/Rains.png');
+    background-size: cover;
+}
+.date-loc {
+    position: relative;
+    width: 149px;
+    height: 46px;
+    top: 80px;
+    left: 473px;
+    gap: 6px;
+}
+#date {
+    position: relative;
+    width: 118px;
+    height: 20px;
+    font-family: 'Josefin Sans';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: #474747;
+}
+#loc {
+    position: relative;
+    width: 149px;
+    height: 20px;
+    font-family: 'Josefin Sans';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #474747;
+    top: 25px;
+}
+.temperature {
+    position: relative;
+    width: 76px;
+    height: 40px;
+    top: 50px;
+    left: 751px;
+    color: #474747;
+}
+.temperature span {
+    font-family: 'Josefin Sans';
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: left;
+    color: #474747;
+}
+.clouds {
+    position: relative;
+    width: 1518px;
+    height: 285px;
+    background-image: url('../imgs/Clouds.png');
+    background-size: cover;
+}
+.rainy-girl {
+    position: relative;
+    width: 168px;
+    height: 155px;
+    left: 660px;
+    background-image: url('../imgs/rainy\ girl.gif');
+    background-size: cover;
+}
+#today {
+    position: relative;
+    width: 185px;
+    height: 60px;
+    top: 70px;
+    left: 663px;
+    gap: 8px;
+}
+#today h1 {
+    position: relative;
+    left: 30px;
+    width: 185px;
+    height: 28px;
+    font-family: 'Josefin Sans';
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
+    color: #474747;
+}
+#today h4 {
+    margin-top: 10px;
+    position: relative;
+    left: 70px;
+    width: 98px;
+    height: 24px;
+    font-family: 'Josefin Sans';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #474747;
+}
+.forecast {
+    position: relative;
+    width: 1518px;
+    height: 421px;
+    top: -111px;
+    border-radius: 60px 60px 0px 0px;
+    background: #F5F9F9;
+}
+.cont {
+    display: flex;
+    justify-content: space-around;
+    position: relative; 
+    width: 1440px;
+    height: 40px;
+    left:40px;
+    top:2px;
+}
+#prev {
+    position: relative;
+    width: 99px;
+    height: 22px;
+    top: 30px;
+    left: -180px;
+    font-family: 'Josefin Sans';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: left;
+    color: #474747;
+    border: none;
+    background-color: #F5F9F9;
+}
+.fa-angle-left {
+    position: relative;
+    left: 10px;
+    top: 27px;
+    width: 28px;
+    height: 28px;
+    font-size: 28px;
+}
+#now {
+    position: relative;
+    width: 63px;
+    height: 22px;
+    top: 35px;
+    left: -85px;
+    font-family: 'Josefin Sans';
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: left;
+    color: #474747;
+}
+.fa-circle {
+    position: relative;
+    left: 135px;
+    top: 70px;
+    width: 8px;
+    height: 8px;
+    font-size: 8px;
+    border-radius: 50%;
+    background-color: #474747;
+}
+#next {
+    position: relative;
+    width: 97px;
+    height: 22px;
+    top: 30px;
+    right: -160px;
+    font-family: 'Josefin Sans';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: left;
+    color: #474747;
+    border: none;
+    background-color: #F5F9F9;
+}
+.fa-angle-right {
+    position: relative;
+    right: 10px;
+    top: 27px;
+    width: 28px;
+    height: 28px;
+    font-size: 28px;
+}
+#next:hover, #prev:hover {
+    text-decoration: underline;
+}
+#weather-hour {
+    position: relative;
+    width: 762px;
+    height: 169px;
+    top: 113px;
+    left: 375px;
+    border-radius: 44px;
+    display: flex;
+    justify-content: space-between;
+}
+.weather-info {
+    width: 74px;
+    height: 150px;
+    padding: 28px 22px;
+    gap: 16px;
+    border-radius: 44px;
+    display: flex;
+    flex-direction: column;
+    background-color: #E5F2F2;
+    border: 1px solid #B5D6D6;
+}
+/* Before switch to javascript
+.weather-info:hover {
+    position: relative;
+    top: -19px;
+    background-color: #FEE68B;
+    border: 1px solid #FBDC64;
+} */
+.hour {
+    width: 38px;
+    height: 14px;
+    font-family: 'Josefin Sans';
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    color: #474747;
+}
+.icon {
+    width: 32px;
+    height: 32px;
+    padding: 2px 0px;
+    font-size: 25px;
+}
+.temp {
+    width: 31px;
+    height: 16px;
+    border: 1px;
+    font-family: 'Josefin Sans';
+    font-size: 12.5px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    color: #474747;
+}
+
+@media (max-width: 767px) {
+    .weather {
+        width: 850px;
+    }
+    .rains {
+        width: 646px;
+    }
+    .date-loc {
+        left: 100px;
+    }
+    .temperature {
+        left: 440px;
+    }
+    .rainy-girl {
+        left: 336px;
+    }
+    .clouds {
+        width: 850px;
+    }
+    #today {
+        left: 336px;
+        top: 60px;
+    }
+    .forecast {
+        width: 850px;
+    }
+    .cont {
+        width: 780px;
+    }
+    #weather-hour {
+        left: 50px;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 820px) {
+    .weather {
+        width: 912px;
+    }
+    .rains {
+        width: 720px;
+    }
+    .date-loc {
+        left: 180px;
+    }
+    .temperature {
+        left: 440px;
+    }
+    .rainy-girl {
+        left: 375px;
+    }
+    .clouds {
+        width: 912px;
+    }
+    #today {
+        left: 375px;
+        top: 75px;
+    }
+    .forecast {
+        width: 912px;
+    }
+    .cont {
+        width: 835px;
+    }
+    #weather-hour {
+        left: 80px;
+    }
+}
+@media screen and (min-width: 820px) and (max-width: 853px) {
+    .weather {
+        width: 820px;
+    }
+    .clouds {
+        width: 820px;
+    }
+    .rains {
+        width: 620px;
+    }
+    .date-loc {
+        left: 135px;
+    }
+    .temperature {
+        left: 400px;
+    }
+    .rainy-girl {
+        left: 323px;
+    }
+    #today {
+        left: 323px;
+    }
+    .forecast {
+        width: 820px;
+    }
+    .cont {
+        width: 755px;
+    }
+    #weather-hour {
+        left: 35px;
+    }
+}
+@media screen and (min-width: 853px) and (max-width: 912px) {
+    .weather {
+        width: 853px;
+    }
+    .clouds {
+        width: 853px;
+    }
+    .rains {
+        width: 641px;
+    }
+    .date-loc {
+        left: 135px;
+    }
+    .temperature {
+        left: 400px;
+    }
+    .rainy-girl {
+        left: 342.5px;
+    }
+    #today {
+        left: 342.5px;
+    }
+    .forecast {
+        width: 853px;
+    }
+    .cont {
+        width: 773px;
+    }
+    #weather-hour {
+        left: 45.5px;
+    }
+}
+@media screen and (min-width: 912px) and (max-width: 1024px) {
+    .weather {
+        width: 912px;
+    }
+    .clouds {
+        width: 912px;
+    }
+    .rains {
+        width: 700px;
+    }
+    .date-loc {
+        left: 135px;
+    }
+    .temperature {
+        left: 420px;
+    }
+    .rainy-girl {
+        left: 372px;
+    }
+    #today {
+        left: 372px;
+        top: 75px;
+    }
+    .forecast {
+        width: 912px;
+    }
+    .cont {
+        width: 832px;
+    }
+    #weather-hour {
+        left: 75px;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    .weather {
+        width: 1024px;
+    }
+    .rains {
+        width: 846px;
+    }
+    .date-loc {
+        left: 200px;
+    }
+    .temperature {
+        left: 520px;
+    }
+    .rainy-girl {
+        left: 430px;
+    }
+    .clouds {
+        width: 1024px;
+    }
+    #today {
+        left: 440px;
+        top: 70px;
+    }
+    .forecast {
+        width: 1024px;
+    }
+    .cont {
+        width: 980px;
+    }
+    #weather-hour {
+        left: 150px;
+    }
+}
+@media screen and (min-width: 1280px) and (max-width: 1366px) {
+    .weather {
+        width: 1280px;
+    }
+    .rains {
+        width: 1068px;
+    }
+    .date-loc {
+        left: 300px;
+    }
+    .temperature {
+        left: 700px;
+    }
+    .rainy-girl {
+        left: 547.5px;
+    }
+    .clouds {
+        width: 1280px;
+    }
+    #today {
+        left: 547.5px;
+        top: 70px;
+    }
+    .forecast {
+        width: 1280px;
+    }
+    .cont {
+        width: 1200px;
+    }
+    #weather-hour {
+        left: 256px;
+    }
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefin-sans/JosefinSans-Thin.ttf');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefin-sans/JosefinSans-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefin-sans/JosefinSans-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefin-sans/JosefinSans-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefin-sans/JosefinSans-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "my-node-project",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "your-script.js",
+  "scripts": {
+    "start": "node your-script.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.0.0"
+  }
+}
