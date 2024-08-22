@@ -1,5 +1,5 @@
 import requests
-
+import json
 api_key = "2558325ef979ea39e0f540d75eabc37c"
 city_name = input("Enter your city: ")
 
@@ -36,8 +36,14 @@ for i in range(len(days)):
     weather_data += f'Daytime: {days[i]}°C\n'
     weather_data += f'Nighttime: {nights[i]}°C\n'
     weather_data += f'Conditions: {descriptions[i]}\n'
-
 print(weather_data)
+# Serializing json
+json_object = json.dumps(data_weekly, indent=4)
+
+# Writing to sample.json
+with open("sample.json", "w") as outfile:
+	outfile.write(json_object)
+
 
 
 # import requests

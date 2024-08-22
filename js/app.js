@@ -1,25 +1,25 @@
 // Pick up some from data.json 
 list = [
-    {"temp": "40 °C", "description": "clear sky", "hour": "12 PM"}, 
-    {"temp": "37 °C", "description": "clear sky", "hour": "2 PM"}, 
-    {"temp": "32 °C", "description": "clear sky", "hour": "4 PM"}, 
-    {"temp": "30 °C", "description": "clear sky", "hour": "6 PM"}, 
-    {"temp": "34 °C", "description": "clear sky", "hour": "8 PM"}, 
-    {"temp": "40 °C", "description": "clear sky", "hour": "10 PM"}, 
-    {"temp": "43 °C", "description": "clear sky", "hour": "12 AM"}, 
-    {"temp": "42 °C", "description": "clear sky", "hour": "2 AM"}, 
-    {"temp": "37 °C", "description": "clear sky", "hour": "4 AM"}, 
-    {"temp": "33 °C", "description": "clear sky", "hour": "12 PM"}, 
-    {"temp": "31 °C", "description": "clear sky", "hour": "2 PM"}, 
-    {"temp": "29 °C", "description": "clear sky", "hour": "4 PM"}, 
-    {"temp": "33 °C", "description": "clear sky", "hour": "6 PM"}, 
-    {"temp": "41 °C", "description": "clear sky", "hour": "8 PM"}, 
-    {"temp": "43 °C", "description": "clear sky", "hour": "10 PM"}, 
-    {"temp": "43 °C", "description": "clear sky", "hour": "12 AM"}, 
-    {"temp": "38 °C", "description": "clear sky", "hour": "2 AM"}, 
-    {"temp": "35 °C", "description": "clear sky", "hour": "4 AM"}, 
-    {"temp": "32 °C", "description": "clear sky", "hour":"12 PM"}, 
-    {"temp": "30 °C", "description": "clear sky", "hour": "2 PM"}
+    {"temp": "40 °C", "description": "clear sky", "day": "2024-08-21", "hour": "12 PM"}, 
+    {"temp": "37 °C", "description": "clear sky", "day": "2024-08-21", "hour": "2 PM"}, 
+    {"temp": "32 °C", "description": "clear sky", "day": "2024-08-21", "hour": "4 PM"}, 
+    {"temp": "30 °C", "description": "clear sky", "day": "2024-08-21", "hour": "6 PM"}, 
+    {"temp": "34 °C", "description": "clear sky", "day": "2024-08-21", "hour": "8 PM"}, 
+    {"temp": "40 °C", "description": "clear sky", "day": "2024-08-21", "hour": "10 PM"}, 
+    {"temp": "43 °C", "description": "clear sky", "day": "2024-08-21", "hour": "12 AM"}, 
+    {"temp": "42 °C", "description": "clear sky", "day": "2024-08-21", "hour": "2 AM"}, 
+    {"temp": "37 °C", "description": "clear sky", "day": "2024-08-21", "hour": "4 AM"}, 
+    {"temp": "33 °C", "description": "clear sky", "day": "2024-08-22", "hour": "12 PM"}, 
+    {"temp": "31 °C", "description": "clear sky", "day": "2024-08-22", "hour": "2 PM"}, 
+    {"temp": "29 °C", "description": "clear sky", "day": "2024-08-22", "hour": "4 PM"}, 
+    {"temp": "33 °C", "description": "clear sky", "day": "2024-08-22", "hour": "6 PM"}, 
+    {"temp": "41 °C", "description": "clear sky", "day": "2024-08-22", "hour": "8 PM"}, 
+    {"temp": "43 °C", "description": "clear sky", "day": "2024-08-22", "hour": "10 PM"}, 
+    {"temp": "43 °C", "description": "clear sky", "day": "2024-08-22", "hour": "12 AM"}, 
+    {"temp": "38 °C", "description": "clear sky", "day": "2024-08-22", "hour": "2 AM"}, 
+    {"temp": "35 °C", "description": "clear sky", "day": "2024-08-22", "hour": "4 AM"}, 
+    {"temp": "32 °C", "description": "clear sky", "day": "2024-08-23", "hour":"12 PM"}, 
+    {"temp": "30 °C", "description": "clear sky", "day": "2024-08-23", "hour": "2 AM"}
 ]
 // Initialize arrays
 const temps = []
@@ -33,6 +33,12 @@ descriptions[i] = new Set(list.map(item => item.description))
 console.log(temps)
 console.log(hours)
 console.log(descriptions)
+// Display date in date-loc div 
+// AND Display day in Clouds Section when click "yesterday","tomorrow" Buttons
+const date = new Date()
+const today = document.getElementById("date")
+const day = document.getElementById("day")
+const week = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"]
 // Yesterday and Tomorrow Buttons
 const prevBtn = document.getElementById("prev");
 const now = document.getElementById("now");
@@ -60,12 +66,48 @@ function getWeatherIcon(description) {
             return '❓'; // Default icon or class
     }
 }
+// Set up day and hour to match with temperature for that day
+function getcurrentTimeDetails() {
+    var currentDate = new Date()
+    var currentHour = currentDate.getHours()
+    var currentDay = currentDate.toISOString().split('T')[0]
+    if (currentHour % 2 !== 0) {
+        currentHour += 1;
+    }
+    if (currentHour === 0 || currentHour === 24) {
+        currentHour = "12 AM"
+    }
+    else if (currentHour === 12) {
+        currentHour = "12 PM"
+    }
+    else if (currentHour > 12) {
+        currentHour -= 12;
+        currentHour += " PM"
+    } else {
+        currentHour += " AM"
+    }
+    return { currentDay, currentHour };
+}
+// Update span degree
+function updateDegree() {
+    const { currentDay, currentHour } = getcurrentTimeDetails();
+    // Find matching entry
+    var matchingEntry = list.find(item => item.day === currentDay && item.hour === currentHour);
+    const degreeElement = document.getElementById("degree");
+    if (matchingEntry) {
+        degreeElement.textContent = matchingEntry.temp; // Update the temperature
+    } else {
+        degreeElement.textContent = "N/A"; // Handle cases where no matching entry is found
+    }
+}
+// Initial temperature update
+updateDegree();
+setInterval(updateDegree, 2 * 60 * 60 * 1000); // Update temperature automatically every 2 hours
 // Function to display data
 function displayData(startIndex) {
-const weatherHour = document.getElementById("weather-hour")
-weatherHour.innerHTML = ""; // Clear existing data
-const endIndex = Math.min(startIndex + itemsPerPage, list.length);
-
+    const weatherHour = document.getElementById("weather-hour")
+    weatherHour.innerHTML = ""; // Clear existing data
+    const endIndex = Math.min(startIndex + itemsPerPage, list.length);
 for (let i = startIndex; i < endIndex; i++) {
     const item = list[i];
     // Create a weather-info container
@@ -107,18 +149,6 @@ for (let i = startIndex; i < endIndex; i++) {
         this.clicked = !this.clicked; // Toggle the clicked state
     });
 }
-// Update span degree
-degreeIndex=0
-function updateDegree() {
-    if (degreeIndex >= endIndex) {
-        degreeIndex = startIndex; // Reset to startIndex if we reach the end
-    }
-    const degreeElement = document.getElementById("degree");
-    degreeElement.textContent = list[degreeIndex].temp; // Update the temperature
-    degreeIndex++; // Move to the next temperature value
-}
-updateDegree()
-setInterval(updateDegree, 2 * 60 * 60 * 1000); // Update temperature every 2 hours
 }
 // Initial display of the first 9 items
 displayData(currentIndex);
@@ -128,26 +158,26 @@ prevBtn.addEventListener("click", () => {
         currentIndex -= itemsPerPage;
         displayData(currentIndex);
     }
+    date.setDate(date.getDate() - 1);
+    updateDateDisplay()
 });
 nextBtn.addEventListener("click", () => {
     if (currentIndex + itemsPerPage < list.length) {
         currentIndex += itemsPerPage;
         displayData(currentIndex);
     }
+    date.setDate(date.getDate() + 1);
+    updateDateDisplay()
 });
-// Display date in date-loc div
-const date = new Date()
-const today = document.getElementById("date")
-today.textContent = date.toDateString()
-console.log(date.toDateString())
+function updateDateDisplay() {
+    today.textContent = date.toDateString();
+    day.textContent = week[date.getDay()];
+}
+updateDateDisplay()
 // Enter city Name
 const city = prompt("Enter your city: ")
 const loc = document.getElementById("loc")
 loc.textContent = city
-// Display day in Clouds Section
-const day = document.getElementById("day")
-const week = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"]
-day.textContent = week[date.getDay()]
 // Display description in Clouds Section
 const desc = document.getElementById("desc")
 const val = descriptions[0].values() // Not working correctly 😅

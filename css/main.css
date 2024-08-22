@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 .weather {
-    width: 1519px;
+    width: 1518px;
     height: 982px;
     background-color: #B5D6D6;
 }
@@ -24,7 +24,6 @@
     gap: 6px;
 }
 #date {
-    position: relative;
     width: 118px;
     height: 20px;
     font-family: 'Josefin Sans';
@@ -35,7 +34,6 @@
     color: #474747;
 }
 #loc {
-    position: relative;
     width: 149px;
     height: 20px;
     font-family: 'Josefin Sans';
@@ -44,7 +42,7 @@
     line-height: 20px;
     text-align: left;
     color: #474747;
-    top: 25px;
+    padding: 26px;
 }
 .temperature {
     position: relative;
@@ -66,6 +64,7 @@
     position: relative;
     width: 1518px;
     height: 285px;
+    top: -20px;
     background-image: url('../imgs/Clouds.png');
     background-size: cover;
 }
@@ -73,7 +72,7 @@
     position: relative;
     width: 168px;
     height: 155px;
-    left: 660px;
+    left: 675px;
     background-image: url('../imgs/rainy\ girl.gif');
     background-size: cover;
 }
@@ -86,28 +85,26 @@
     gap: 8px;
 }
 #today h1 {
-    position: relative;
-    left: 30px;
     width: 185px;
     height: 28px;
     font-family: 'Josefin Sans';
     font-size: 28px;
     font-weight: 700;
     line-height: 28px;
-    text-align: left;
+    text-align: center;
     color: #474747;
 }
 #today h4 {
-    margin-top: 10px;
     position: relative;
-    left: 70px;
+    left: 48.5px;
+    top: -10px;
     width: 98px;
     height: 24px;
     font-family: 'Josefin Sans';
     font-size: 24px;
     font-weight: 400;
     line-height: 24px;
-    text-align: left;
+    text-align: center;
     color: #474747;
 }
 .forecast {
@@ -119,82 +116,89 @@
     background: #F5F9F9;
 }
 .cont {
-    display: flex;
-    justify-content: space-around;
-    position: relative; 
-    width: 1440px;
-    height: 40px;
-    left:40px;
-    top:2px;
+    width: 1412px;
+    height: 70px;
+}
+.yesterday {
+    position: relative;
+    width: 129px;
+    height: 28px;
+    top: 25px;
 }
 #prev {
-    position: relative;
     width: 99px;
     height: 22px;
-    top: 30px;
-    left: -180px;
     font-family: 'Josefin Sans';
-    font-size: 22px;
     font-weight: 500;
+    font-size: 22px;
     line-height: 22px;
     text-align: left;
     color: #474747;
     border: none;
     background-color: #F5F9F9;
+    position: relative;
+    left: 80px;
+    top: 10px;
 }
 .fa-angle-left {
-    position: relative;
-    left: 10px;
-    top: 27px;
     width: 28px;
     height: 28px;
     font-size: 28px;
+    position: relative;
+    left: 50px;
+    top: 35px;
 }
 #now {
-    position: relative;
     width: 63px;
     height: 22px;
-    top: 35px;
-    left: -85px;
     font-family: 'Josefin Sans';
-    font-size: 22px;
     font-weight: 700;
+    font-size: 22px;
     line-height: 22px;
     text-align: left;
     color: #474747;
+    position: relative;
+    top: 38px;
+    left: 727px;
 }
 .fa-circle {
-    position: relative;
-    left: 135px;
-    top: 70px;
     width: 8px;
     height: 8px;
     font-size: 8px;
     border-radius: 50%;
     background-color: #474747;
+    position: relative;
+    left: 756px;
+    top: 60px;
+}
+.tomorrow {
+    position: relative;
+    width: 124px;
+    height: 28px;
+    top: 25px;
 }
 #next {
-    position: relative;
     width: 97px;
     height: 22px;
-    top: 30px;
-    right: -160px;
     font-family: 'Josefin Sans';
-    font-size: 22px;
     font-weight: 500;
+    font-size: 22px;
     line-height: 22px;
     text-align: left;
     color: #474747;
     border: none;
     background-color: #F5F9F9;
+    position: relative;
+    right: -1288px;
+    top: -25px;
 }
 .fa-angle-right {
-    position: relative;
-    right: 10px;
-    top: 27px;
     width: 28px;
     height: 28px;
     font-size: 28px;
+    position: relative;
+    right: -1400px;
+    top: -55px;
 }
 #next:hover, #prev:hover {
     text-decoration: underline;
@@ -255,233 +259,72 @@
     color: #474747;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 640px) {
     .weather {
-        width: 850px;
+        width: 768px;
     }
     .rains {
-        width: 646px;
-    }
-    .date-loc {
-        left: 100px;
-    }
-    .temperature {
-        left: 440px;
+        width: 556px;
     }
     .rainy-girl {
-        left: 336px;
+        left: 300px;
     }
     .clouds {
-        width: 850px;
-    }
-    #today {
-        left: 336px;
-        top: 60px;
+        width: 768px;
     }
     .forecast {
-        width: 850px;
-    }
-    .cont {
-        width: 780px;
-    }
-    #weather-hour {
-        left: 50px;
+        width: 768px;
     }
 }
-@media screen and (min-width: 767px) and (max-width: 820px) {
-    .weather {
-        width: 912px;
-    }
-    .rains {
-        width: 720px;
-    }
-    .date-loc {
-        left: 180px;
-    }
-    .temperature {
-        left: 440px;
-    }
-    .rainy-girl {
-        left: 375px;
-    }
-    .clouds {
-        width: 912px;
-    }
-    #today {
-        left: 375px;
-        top: 75px;
-    }
-    .forecast {
-        width: 912px;
-    }
-    .cont {
-        width: 835px;
-    }
-    #weather-hour {
-        left: 80px;
-    }
-}
-@media screen and (min-width: 820px) and (max-width: 853px) {
-    .weather {
-        width: 820px;
-    }
-    .clouds {
-        width: 820px;
-    }
-    .rains {
-        width: 620px;
-    }
-    .date-loc {
-        left: 135px;
-    }
-    .temperature {
-        left: 400px;
-    }
-    .rainy-girl {
-        left: 323px;
-    }
-    #today {
-        left: 323px;
-    }
-    .forecast {
-        width: 820px;
-    }
-    .cont {
-        width: 755px;
-    }
-    #weather-hour {
-        left: 35px;
-    }
-}
-@media screen and (min-width: 853px) and (max-width: 912px) {
-    .weather {
-        width: 853px;
-    }
-    .clouds {
-        width: 853px;
-    }
-    .rains {
-        width: 641px;
-    }
-    .date-loc {
-        left: 135px;
-    }
-    .temperature {
-        left: 400px;
-    }
-    .rainy-girl {
-        left: 342.5px;
-    }
-    #today {
-        left: 342.5px;
-    }
-    .forecast {
-        width: 853px;
-    }
-    .cont {
-        width: 773px;
-    }
-    #weather-hour {
-        left: 45.5px;
-    }
-}
-@media screen and (min-width: 912px) and (max-width: 1024px) {
-    .weather {
-        width: 912px;
-    }
-    .clouds {
-        width: 912px;
-    }
-    .rains {
-        width: 700px;
-    }
-    .date-loc {
-        left: 135px;
-    }
-    .temperature {
-        left: 420px;
-    }
-    .rainy-girl {
-        left: 372px;
-    }
-    #today {
-        left: 372px;
-        top: 75px;
-    }
-    .forecast {
-        width: 912px;
-    }
-    .cont {
-        width: 832px;
-    }
-    #weather-hour {
-        left: 75px;
-    }
-}
-@media screen and (min-width: 1024px) and (max-width: 1280px) {
+@media (min-width: 768px) {
     .weather {
         width: 1024px;
     }
     .rains {
-        width: 846px;
-    }
-    .date-loc {
-        left: 200px;
-    }
-    .temperature {
-        left: 520px;
+        width: 812px;
     }
     .rainy-girl {
-        left: 430px;
+        left: 428px;
     }
     .clouds {
         width: 1024px;
     }
-    #today {
-        left: 440px;
-        top: 70px;
-    }
     .forecast {
         width: 1024px;
     }
-    .cont {
-        width: 980px;
-    }
-    #weather-hour {
-        left: 150px;
-    }
 }
-@media screen and (min-width: 1280px) and (max-width: 1366px) {
+@media (min-width: 1024px) {
     .weather {
         width: 1280px;
     }
     .rains {
         width: 1068px;
     }
-    .date-loc {
-        left: 300px;
-    }
-    .temperature {
-        left: 700px;
-    }
     .rainy-girl {
-        left: 547.5px;
+        left: 556px;
     }
     .clouds {
         width: 1280px;
     }
-    #today {
-        left: 547.5px;
-        top: 70px;
-    }
     .forecast {
         width: 1280px;
     }
-    .cont {
-        width: 1200px;
+}
+@media (min-width: 1280px) {
+    .weather {
+        width: 1518px;
     }
-    #weather-hour {
-        left: 256px;
+    .rains {
+        width: 1310px;
+    }
+    .rainy-girl {
+        left: 675px;
+    }
+    .clouds {
+        width: 1518px;
+    }
+    .forecast {
+        width: 1518px;
     }
 }
 
