@@ -34,7 +34,7 @@
     color: #474747;
 }
 #loc {
-    width: 149px;
+    width: 235px;
     height: 20px;
     font-family: 'Josefin Sans';
     font-size: 20px;
@@ -42,7 +42,7 @@
     line-height: 20px;
     text-align: left;
     color: #474747;
-    padding: 26px;
+    padding: 26px 0px;
 }
 .temperature {
     position: relative;
@@ -190,7 +190,7 @@
     background-color: #F5F9F9;
     position: relative;
     right: -1288px;
-    top: -25px;
+    top: -30px;
 }
 .fa-angle-right {
     width: 28px;
